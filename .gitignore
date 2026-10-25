@@ -1,0 +1,25 @@
+cd ~/AI/pixel-art-animation-lab
+
+cat > .gitignore <<'EOF'
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# Modelos grandes de IA
+models/*
+!models/README.md
+ComfyUI/models/
+
+# Imagens e animações geradas
+input/*
+!input/README.md
+output/*
+!output/README.md
+
+# Cache e arquivos temporários
+.cache/
+*.log
+.DS_Store
+EOF
