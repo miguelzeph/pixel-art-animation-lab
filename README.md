@@ -1,4 +1,3 @@
-cat > README.md <<'EOF'
 # Pixel Art Animation Lab
 
 Local AI-assisted workflow for creating consistent pixel-art character animations for HTML5 games.
