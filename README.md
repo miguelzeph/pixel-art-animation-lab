@@ -103,3 +103,47 @@ Keep the terminal open while using ComfyUI.
 - ComfyUI is managed as a Git submodule.
 - AI model weights and generated assets should remain local unless explicitly selected for version control.
 - Avoid committing large model files to Git.
+
+
+## Starting - Stable Diffusion 1.5 Checkpoint
+
+Downloaded the inference-oriented Stable Diffusion 1.5 checkpoint:
+
+v1-5-pruned-emaonly.safetensors
+
+Source:
+
+https://huggingface.co/sd-legacy/stable-diffusion-v1-5
+
+The checkpoint was selected because the EMA-only version uses less storage and memory than the version containing additional non-EMA weights.
+
+Created the ComfyUI checkpoint directory:
+
+```bash
+mkdir -p ~/Dev/pixel-art-animation-lab/ComfyUI/models/checkpoints
+```
+
+Moved the downloaded checkpoint into that directory:
+
+```bash
+mv ~/Downloads/v1-5-pruned-emaonly.safetensors \
+  ~/Dev/pixel-art-animation-lab/ComfyUI/models/checkpoints/
+```
+
+The model is stored locally and should not be committed to Git.
+
+5. Starting the ComfyUI Server
+
+The ComfyUI server was successfully started without errors using:
+
+```bash
+cd ~/Dev/pixel-art-animation-lab/ComfyUI
+source ../.venv/bin/activate
+python main.py --cpu-vae --lowvram
+```
+
+The interface is available locally at:
+
+http://127.0.0.1:8188
+
+The --cpu-vae and --lowvram options are intended to reduce GPU memory pressure on the integrated Radeon 780M.
