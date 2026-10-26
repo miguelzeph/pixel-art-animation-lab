@@ -8,8 +8,8 @@ __pycache__/
 *.py[cod]
 
 # Modelos grandes de IA
-models/*
-!models/README.md
+# models/*
+# !models/README.md
 ComfyUI/models/
 
 # Imagens e animações geradas
