@@ -147,3 +147,12 @@ The interface is available locally at:
 http://127.0.0.1:8188
 
 The --cpu-vae and --lowvram options are intended to reduce GPU memory pressure on the integrated Radeon 780M.
+
+
+## Tips
+- seed: controla aleatoriedade
+- Steps -> se diminuir, reduz o tempo de geração.
+- denoise (0-1) -> quanto menor, menos a imagem muda da imagem de input
+- cfg -> influência do prompt
+- positive -> é a descrição que você deseja criar
+- negative -> são as característticas que voce quer evitar
